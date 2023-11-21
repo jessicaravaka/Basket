@@ -14,6 +14,14 @@ public class Joueur {
     @JoinColumn (name = "idEquipe", referencedColumnName ="id")
     private Equipe equipe;
 
+    public Joueur(String nom, int num, Equipe equipe) {
+        this.nom = nom;
+        this.num = num;
+        this.equipe = equipe;
+    }
+
+    public Joueur() {}
+
 
     public int getId() {
         return id;

@@ -25,4 +25,6 @@ public class Equipe {
     public void setNom(String nom) {
         this.nom = nom;
     }
+
+
 }

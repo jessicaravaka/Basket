@@ -11,7 +11,7 @@ public class Match {
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private  int id;
     private String lieu;
-    private Date dateMatch;
+    private String dateMatch;
     @ManyToOne
     @JoinColumn( name = "idEquipe1", referencedColumnName = "id")
     private Equipe equipe1;
@@ -20,12 +20,14 @@ public class Match {
     @JoinColumn ( name = "idEquipe2", referencedColumnName = "id")
     private Equipe equipe2;
 
-    public Match(String lieu, Date dateMatch, Equipe equipe1, Equipe equipe2) {
+    public Match(String lieu, String dateMatch, Equipe equipe1, Equipe equipe2) {
         this.lieu = lieu;
         this.dateMatch = dateMatch;
         this.equipe1 = equipe1;
         this.equipe2 = equipe2;
     }
+
+    public Match() {}
 
     public int getId() {
         return id;
@@ -43,11 +45,11 @@ public class Match {
         this.lieu = lieu;
     }
 
-    public Date getDateMatch() {
+    public String getDateMatch() {
         return dateMatch;
     }
 
-    public void setDateMatch(Date dateMatch) {
+    public void setDateMatch(String dateMatch) {
         this.dateMatch = dateMatch;
     }
 
