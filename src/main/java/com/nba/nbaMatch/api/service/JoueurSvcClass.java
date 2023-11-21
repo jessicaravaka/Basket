@@ -28,6 +28,7 @@ public class JoueurSvcClass implements JoueurService {
         return joueurRepo.findAll();
     }
 
+    @Override
     public Joueur getJoueurById(int idJoueur) {
         return joueurRepo.findById(idJoueur)
                 .orElseThrow(() -> new RuntimeException("Player not found with id: " + idJoueur));
